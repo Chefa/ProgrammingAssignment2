@@ -36,14 +36,14 @@ cacheSolve <- function(x, ...) {
 }
 
 
-#tests
-m1 <- makeCacheMatrix(matrix (1:4, nrow = 2, ncol = 2))
-m1inv <- cacheSolve(m1) #no chache
-m1inv <- cacheSolve(m1) #cached
-m1$get() %*% m1inv
-set.seed(12345)
-m1$set(matrix (rnorm(25), nrow = 5, ncol = 5))
-m1inv <- cacheSolve(m1) #no chache
-m1inv <- cacheSolve(m1) #cached
-round(m1$get() %*% m1inv, digits = 9)
+# #tests
+# m1 <- makeCacheMatrix(matrix (1:4, nrow = 2, ncol = 2))
+# m1inv <- cacheSolve(m1) #no chache
+# m1inv <- cacheSolve(m1) #cached
+# m1$get() %*% m1inv
+# set.seed(12345)
+# m1$set(matrix (rnorm(25), nrow = 5, ncol = 5))
+# m1inv <- cacheSolve(m1) #no chache
+# m1inv <- cacheSolve(m1) #cached
+# round(m1$get() %*% m1inv, digits = 9)
 
